@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { min-height: 100%; }
+body { @apply bg-slate-950 text-slate-200 antialiased; }
+.leaflet-container { background: #0b1220; font-family: inherit; }
+.leaflet-tooltip { background: #0f172a; color: #e2e8f0; border: 1px solid #334155; border-radius: 8px; }
+.leaflet-tooltip-top:before { border-top-color: #334155; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 8px; }

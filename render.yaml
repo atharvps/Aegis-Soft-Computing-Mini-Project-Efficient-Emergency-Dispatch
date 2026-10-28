@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: aegis-sc-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: CORS_ORIGINS
+        value: "*"          # replace with your Vercel URL in production
+      - key: DATA_PATH
+        value: data/data.csv
